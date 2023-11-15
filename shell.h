@@ -1,14 +1,20 @@
 #ifndef SHELL_H
 #define SHELL_H
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <dirent.h>
-#include <signal.h>
-#include <unistd.h>
-#include <fcntl.h>
 
-/* global variables */
-extern char **environ;
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+#include<string.h>
+
+#define MAX_INPUT_LENGTH 100
+
+int odd(int n);
+void execute_command(char *command);
+int main(void);
+char *get_input(void);
+void exit_shell(void);
+
+
 #endif
